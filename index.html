@@ -62,7 +62,7 @@
 
     // run the webcam image through the image model
     async function predict() {
-        var beep= new Audio('./my_model/beep-08.wav');
+        var beep= new Audio('./my_model/beep-07.wav');
         // predict can take in an image, video or canvas html element
         const prediction = await model.predict(webcam.canvas);
         for (let i = 0; i < maxPredictions; i++) {
@@ -71,7 +71,7 @@
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
         if(prediction[2].className == "not used mask" && prediction[2].probability.toFixed(2) >= 0.90){
-            labelContainer.childNodes[2].innerHTML = setTimeout(beep.play(),5000);
+            labelContainer.childNodes[2].innerHTML = beep.play();
         }
         
     }
