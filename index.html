@@ -71,8 +71,9 @@
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
         if(prediction[2].className == "not used mask" && prediction[2].probability.toFixed(2) >= 0.90){
-            labelContainer.childNodes[2].innerHTML = beep.play(); 
+            labelContainer.childNodes[2].innerHTML = setTimeout(beep.play(),1800);
         }
+        
     }
 </script>
 
