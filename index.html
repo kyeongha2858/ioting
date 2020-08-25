@@ -15,7 +15,11 @@
 <button align="center" type="button" id="my-btn" onclick="init()">Start</button>
 <script>
     const btn = document.querySelector("#my-btn");
-    btn.click();
+    
+    function init(){
+        btn.click();
+    }
+    init();
 </script>
 <div id="webcam-container" style="float:left"></div>
 <div id="label-container" style="float:left"></div>
