@@ -7,7 +7,7 @@ function hidingFN(){
     btn.classList.toggle(HIDING_CL);
 }
 
-function init(){
+function inits(){
     btn.addEventListener("click",hidingFN)
 }
-init();
+inits();
